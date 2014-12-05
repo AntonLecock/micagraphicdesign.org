@@ -205,7 +205,7 @@ li {
 
 /* OVERALL */
 
-body .canvas {
+body .main {
     width:70%;
     margin:0 auto;
     max-width:1024px;
@@ -230,7 +230,6 @@ h1 {
 }
 
 h2 {
-/*    font-family: Domaine Display, georgia, serif;*/
 }
 
 h2 > a {
@@ -249,7 +248,7 @@ h2 > a:active {
 }
 
 @media screen and (max-width: 1024px) {
-    body .canvas {
+    body .main {
         width:80%;
     }
 
@@ -265,7 +264,7 @@ h2 > a:active {
 }
 
 @media screen and (max-width: 768px) {
-    body .canvas {
+    body .main {
         width:90%;
     }
 
@@ -282,7 +281,7 @@ h2 > a:active {
 }
 
 @media screen and (max-width: 512px) {
-    body .canvas {
+    body .main {
         width:100%;
     }
 
@@ -343,7 +342,7 @@ h2 > a:active {
 @media screen and (max-width: 512px) {
     .masthead .brand {
         font-size:4.5em;
-        width:412px;
+        width:400px;
     }
 }
 
@@ -385,27 +384,24 @@ h2 > a:active {
 
 .masthead .navigation {
     position:fixed;
-    top:10px;
+    top:0;
     left:0;
     z-index:1000000000000;
-    max-height:100px;
+    padding:10px 0 15px;
     width:100%;
     margin:0 auto;
-    background: -webkit-linear-gradient(rgba(247, 241, 234, .8), rgba(247, 241, 234, 0)); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(rgba(247, 241, 234, .8), rgba(247, 241, 234, 0)); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(rgba(247, 241, 234, .8), rgba(247, 241, 234, 0)); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(rgba(247, 241, 234, .8), rgba(247, 241, 234, 0)); /* Standard syntax */
-    transition: height 2s ease .2s;
-    height:0;
-    max-height: 0;
+    background: -webkit-linear-gradient(rgba(247, 241, 234, .9), rgba(247, 241, 234, 0)); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(rgba(247, 241, 234, .9), rgba(247, 241, 234, 0)); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(rgba(247, 241, 234, .9), rgba(247, 241, 234, 0)); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(rgba(247, 241, 234, .9), rgba(247, 241, 234, 0)); /* Standard syntax */
+    transition: height .3s ease;
+    height:50px;
     overflow:visible;
 }
 
 .masthead .navigation:hover {
     top:0;
-    padding:10px 0 15px;
-    height:120px;
-    min-height:120px;
+    height:200px;
 }
 
 
@@ -468,7 +464,7 @@ h2 > a:active {
     background: linear-gradient(to bottom, rgba(247, 241, 234, 1), rgba(247, 241, 234, 0));
 */    padding:10px 0 30px 0;
     text-transform: lowercase;
-    z-index: 8000;
+    z-index: 100000000000000;
 }   
 
 .utility .menu {
@@ -724,30 +720,36 @@ h2 > a:active {
     border-bottom:2px solid rgba(253, 120, 96, 0);
 }
 
-
-/* SUB */
-
-.sub {
-    max-width:1024px;
-    width:100%;
-    margin:0 auto;
-}
-
-.sub .formats,
-.sub .archives {
-    margin:0 auto;
+.formats {
+    margin:0 auto 4em auto;
     text-align:center;
 }
 
-.sub .formats:before {
+.formats:before {
     content:"Browse by";
     display:block;
     margin: 20px 0 10px 0;
 }
 
-.sub .formats .menu {
+.formats .menu {
     margin:0;
 }
+
+/* SUB */
+
+.sub {
+    width:100%;
+    padding: 1em 0;
+    margin:0 auto;
+    background: rgba(253, 120, 96, .5);
+}
+
+.sub .archives {
+    margin:0 auto;
+    text-align:center;
+}
+
+
 
 .sub .archives {
 margin-bottom:20px;
@@ -838,6 +840,11 @@ margin-bottom:20px;
 
 @media screen and (max-width: 768px) {
     .sub {
+        background: #FD7860;
+    }
+
+    .sub a {
+        color:#f7f1ea;
     }
 }
 
@@ -851,9 +858,11 @@ margin-bottom:20px;
 
 body footer {
     display:block;
-    width:70%;
-    margin: 0 auto 60px auto;
+    margin: 0 auto;
     text-align:center;
+    padding:60px 0;
+    background: rgba(253, 120, 96, .5);
+
 }
 
 .footer .departments {
@@ -868,6 +877,19 @@ body footer {
 
 }
 
+@media screen and (max-width: 768px) {
+
+    body footer {
+        background: #FD7860;
+    }
+
+    body footer a:link,
+    body footer a:hover,
+    body footer a:active,
+    body footer a:visited {
+        color:#f7f1ea;
+    }
+}
 
 
 /* EVENTS & NEWS LISTING PAGE */
