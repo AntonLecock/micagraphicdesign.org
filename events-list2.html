@@ -18,6 +18,7 @@
         <link rel="stylesheet" href="css/skeleton.css">-->
         <link rel="stylesheet" href="css/helpers.css">
         <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" type="text/css">
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
     <body class="layout event list ui">
@@ -29,12 +30,12 @@
           <div class="shim">
 
             <header class="masthead" role="banner">
-              <div class="brand">
+              <div class="brand" id="brand">
               	<a class="mark" href="/" title="MICA Graphic Design" data-0="text-shadow: 0 .1em #fd7F60, 0 .2em #fd8560, 0 .3em #fd8C60, 0 .4em #fd9260, 0 .5em #fd9960;" data--100-top="text-shadow: 0px 0px #fd7F60, 0px 0px #fd8560, 0px 0px #fd8C60, 0px 0px #fd9260, 0px 0px #fd9960;" data-smooth-scrolling="off" >MICA Graphic Design</a>
               </div> <!-- /.brand -->
             
             
-              <nav class="navigation menus" role="navigation">
+              <nav id="main-navigation" class="navigation menus" role="navigation">
                 <strong class="visuallyhidden">Main Navigation</strong>
                 <ul class="menu level-1" role="menubar">
                   <li class="item">
@@ -63,7 +64,7 @@
               </nav>
             
             
-              <nav class="utility menus">
+              <nav id="utility-navigation" class="utility menus" data-start="top: 50px; opacity:0" data-150-start="top:50px; opacity:1">
                 <ul class="menu">
                   <li class="item">
                     <a href="#News" class="link">News</a>
@@ -87,25 +88,26 @@
                     <a href="#Login" class="link">Login</a>
                   </li>
                 </ul>
+              </nav><!-- /.utility menus -->
             
-            
-                <form action="#" class="form" role="search">
+              </header><!-- /.masthead -->
+
+              <form action="#" class="form" role="search">
                   <div class="field">
                     <label for="masthead-search"></label>
-                    <input id="masthead-search" type="text" placeholder="Search the Site" name="s"></div>
+                    <input id="masthead-search" type="text" placeholder="..." name="s"></div>
                   <div class="action">
                     <button class="control" type="submit">Search</button>
                   </div>
                 </form>
-              </nav><!-- /.utility menus -->
-            
+                
               <nav class="social menus">
                 <ul class="menu">
                   <li class="item">
                     <a class="link" href="https://twitter.com/MICA_GD"  title="Twitter">Twitter</a>
                   </li>
                   <li class="item">
-                    <a class="link" href="http://micagraphicdesign.tumblr.com/"  title="Tumblr">Tumbler</a>
+                    <a class="link" href="http://micagraphicdesign.tumblr.com/"  title="Tumblr">Tumblr</a>
                   </li>
                   <li class="item">
                     <a class="link" href="http://vimeo.com/micagd"  title="Vimeo">Vimeo</a>
@@ -117,8 +119,7 @@
                     <a class="link" href="http://flickr.com/groups/gdmica"  title="Flickr">Flickr</a>
                   </li>
                 </ul>
-              </nav></header><!-- /.masthead -->
-
+              </nav>
 
             <main class="page" role="main">
             
@@ -497,12 +498,9 @@
         </div> <!-- /.footer -->
       </div> <!-- /.content -->
     </div> <!-- /.item.event#event-10 -->
+  </div> <!-- /.items.events -->
 
-
-
-
-
-    <nav class="menus paging">
+  <nav class="menus paging">
       <ul class="menu paginate">
         <li class="item"><a href="#" class="link active">1</a></li>
         <li class="item"><a href="#" class="link">2</a></li>
@@ -512,8 +510,6 @@
       </ul>
     </nav> <!-- /.menus.paging -->
 
-
-  </div> <!-- /.items.events -->
 </div> <!-- /.main -->
 
 

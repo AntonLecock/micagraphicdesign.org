@@ -22,6 +22,22 @@ COLORS
 
 */
 
+/*
+MEDIA QUERIES
+
+@media screen and (max-width: 1024px) {
+
+}
+
+@media screen and (max-width: 768px) {
+    
+}
+
+@media screen and (max-width: 512px) {
+    
+}
+*/
+
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
@@ -205,32 +221,11 @@ h1 {
     font-weight:700;
     font-size:2.6em;
     overflow:visible;
-}
-
-@media screen and (max-width: 1024px) {
-    h1 {
-        font-size:2.2em;
-        width:80%;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    h1 {
-        font-size:1.8em;
-        text-align: center;
-        width:90%;
-    }
-}
-
-@media screen and (max-width: 512px) {
-    h1 {
-        font-size:2em;
-        margin-left:5%;
-    }
+    margin-top:330px;
 }
 
 .main > .div,
-main > article {
+.main > article {
     margin-top:70px;
 }
 
@@ -249,7 +244,7 @@ h2 > a:active {
     border-bottom:none;
 }
 
-.shim > .page {
+.items {
     padding-top:340px;
 }
 
@@ -258,8 +253,14 @@ h2 > a:active {
         width:80%;
     }
 
-    .shim > .page {
+    .items {
         padding-top:300px;
+    }
+
+    h1 {
+        font-size:2.2em;
+        width:80%;
+        margin-top:300px;
     }
 }
 
@@ -267,8 +268,16 @@ h2 > a:active {
     body .canvas {
         width:90%;
     }
-    .shim > .page {
+
+    .items {
         padding-top:250px;
+    }
+
+    h1 {
+        font-size:2.5em;
+        text-align: center;
+        width:90%;
+        margin-top:250px;
     }
 }
 
@@ -277,8 +286,14 @@ h2 > a:active {
         width:100%;
     }
 
-    .shim > .page {
-        padding-top:220px;
+    .items {
+        padding-top:200px;
+    }
+
+    h1 {
+        font-size:2.5em;
+        width:100%;
+        margin-top:200px;
     }
 }
 
@@ -319,14 +334,15 @@ h2 > a:active {
 
 @media screen and (max-width: 768px) {
     .masthead .brand {
-        font-size:5em;
+        top:80px;
+        font-size:5.5em;
         width:512px;
     }
 }
 
 @media screen and (max-width: 512px) {
     .masthead .brand {
-        font-size:4em;
+        font-size:4.5em;
         width:412px;
     }
 }
@@ -335,11 +351,32 @@ h2 > a:active {
 
 /* ALL NAVIGATION - MENUS */ 
 
-.menus li {
+.menus .item.dropdown {
 }
 
-.menus {
 
+.menus .item.dropdown .content {
+    display:none;
+    position:absolute;
+
+}
+
+.menus .item.dropdown:hover .content {
+    display:block;
+    text-align:left;
+}
+
+.menus .item.dropdown:hover .content * {
+        text-align:left;
+}
+
+.menus .item.dropdown li {
+    display:block;
+    color:#AAFCC6;
+    margin:.2em 0 0 0;
+}
+
+.menus .item.dropdown li a {
 }
 
 
@@ -348,16 +385,29 @@ h2 > a:active {
 
 .masthead .navigation {
     position:fixed;
-    top:0;
+    top:10px;
     left:0;
-    z-index:1;
+    z-index:1000000000000;
     max-height:100px;
     width:100%;
     margin:0 auto;
-    padding:10px 0 15px;
-/*    background:#f7f1ea;
-*/    text-transform: lowercase;
+    background: -webkit-linear-gradient(rgba(247, 241, 234, .8), rgba(247, 241, 234, 0)); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(rgba(247, 241, 234, .8), rgba(247, 241, 234, 0)); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(rgba(247, 241, 234, .8), rgba(247, 241, 234, 0)); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(rgba(247, 241, 234, .8), rgba(247, 241, 234, 0)); /* Standard syntax */
+    transition: height 2s ease .2s;
+    height:0;
+    max-height: 0;
+    overflow:visible;
 }
+
+.masthead .navigation:hover {
+    top:0;
+    padding:10px 0 15px;
+    height:120px;
+    min-height:120px;
+}
+
 
 .masthead .navigation .menu {
     max-width:600px;
@@ -428,15 +478,19 @@ h2 > a:active {
 .utility .item {
     display:inline-block;
     margin:0 5px 10px 0;
+} 
+
+.utility .item a {
+    display:inline-block;
     height:20px;
     padding:1px 10px;
     background-color: rgba(253, 120, 96, 1);
     transition: background-color .15s ease;
-} 
+}
 
-.utility .item:hover,
-.utility .item:active {
-    background-color: rgba(253, 120, 96, 0);
+.utility .item a:hover,
+.utility .item a:active {
+    background-color: rgba(253, 120, 96, .4);
 }
     
  .utility .item a {
@@ -468,7 +522,7 @@ h2 > a:active {
     margin:15px 0 0 15px;
     top:0;
     left:0;
-    z-index:9000;
+    z-index:90000000000000000000000000;
 
 }
 
@@ -566,7 +620,7 @@ h2 > a:active {
     margin:0;
     right:15px;
     top:15px;
-    z-index:10000;
+    z-index:90000000000000000000000000;
 }  
 
 .social .menu {
@@ -637,8 +691,9 @@ h2 > a:active {
 
 /* PAGINATION */
 .paging {
+    display:block;
     width:100%;
-    margin:20px auto 40px auto;
+    margin:50px auto 40px auto;
     text-align:center;
 
 }
@@ -815,13 +870,17 @@ body footer {
 
 
 
-/* EVENTS & LISTING PAGE */
+/* EVENTS & NEWS LISTING PAGE */
 
 body.event.list,
 body.news.list {
     display:inline-block;
     width:100%;
     margin:0 auto;
+}
+
+body.event.list .items.events {
+    overflow:auto;
 }
 
 body.event.list .event {
@@ -928,6 +987,12 @@ body.event.list .event .content .footer a {
     }
     body.event.list .event .content {
         margin-top:15px;
+    }
+}
+
+@media screen and (max-width:512px) {
+    body.event.list .attach {
+        height:400px;
     }
 }
 
@@ -1136,6 +1201,10 @@ body.event.list .event .content .footer a {
 
 .clearfix:after {
     clear: both;
+}
+
+.passive {
+    opacity:.5;
 }
 
 /* ==========================================================================
