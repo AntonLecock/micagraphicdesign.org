@@ -221,13 +221,12 @@ h1 {
     font-weight:700;
     font-size:2.6em;
     overflow:visible;
-    margin-top:330px;
 }
-
+/*
 .main > .div,
 .main > article {
     margin-top:70px;
-}
+}*/
 
 h2 {
 }
@@ -243,8 +242,17 @@ h2 > a:active {
     border-bottom:none;
 }
 
-.items {
+.main {
     padding-top:340px;
+}
+
+.main .content {
+    margin-top:0px;
+}
+
+
+.main article .body {
+    overflow:auto;
 }
 
 @media screen and (max-width: 1024px) {
@@ -252,14 +260,13 @@ h2 > a:active {
         width:80%;
     }
 
-    .items {
+    .main {
         padding-top:300px;
     }
 
     h1 {
         font-size:2.2em;
         width:80%;
-        margin-top:300px;
     }
 }
 
@@ -268,7 +275,11 @@ h2 > a:active {
         width:90%;
     }
 
-    .items {
+    .main .content {
+        margin-top:50px;
+    }
+
+    .main {
         padding-top:250px;
     }
 
@@ -276,7 +287,6 @@ h2 > a:active {
         font-size:2.5em;
         text-align: center;
         width:90%;
-        margin-top:250px;
     }
 }
 
@@ -285,14 +295,13 @@ h2 > a:active {
         width:100%;
     }
 
-    .items {
+    .main {
         padding-top:200px;
     }
 
     h1 {
         font-size:2.5em;
         width:100%;
-        margin-top:200px;
     }
 }
 
@@ -865,21 +874,21 @@ body footer {
 
 }
 
-.footer .departments {
+body > .footer .departments {
 }
 
-.footer .departments .item {
+body > .footer .departments .item {
     display:inline-block;
     margin:0 10px;
 }
 
-.footer .legal {
+body > .footer .legal {
 
 }
 
 @media screen and (max-width: 768px) {
 
-    body footer {
+    body > footer {
         background: #FD7860;
     }
 
@@ -894,18 +903,18 @@ body footer {
 
 /* EVENTS & NEWS LISTING PAGE */
 
-body.event.list,
-body.news.list {
+body.list,
+body.list {
     display:inline-block;
     width:100%;
     margin:0 auto;
 }
 
-body.event.list .items.events {
+body.list .items {
     overflow:auto;
 }
 
-body.event.list .event {
+body.list .event {
     width:100%;
     float:left;
     margin:40px auto 0 auto;
@@ -1020,15 +1029,19 @@ body.event.list .event .content .footer a {
 
 /* PROFILE DETAIL PAGE */
 
-.h-entry {
+body.profile {
     overflow:auto;
 }
 
-.h-entry p:first-of-type {
+body.profile .page {
+    overflow:auto;
+}
+
+body.profile p:first-of-type {
     margin-top:0;
 }
 
-.h-entry .attach {
+body.profile .attach {
     min-width:60%;
     width:58%;
     float:left;
@@ -1038,100 +1051,100 @@ body.event.list .event .content .footer a {
 }
 
 
-.h-entry .attach img {
+body.profile .attach img {
     margin:0;
     width:100%;
 }
 
-.h-entry .attach .caption {
+body.profile .attach .caption {
     margin-top:10px;
 }
 
-.h-entry aside {
+body.profile aside {
     float:left;
 }
 
-.h-entry aside.profiles,
-.h-entry header {
+body.profile aside.profiles,
+body.profile header {
     float:right;
     width:38%;
 }
 
-.h-entry aside.gallery {
+body.profile aside.gallery {
     width:60%;
     float:left;
     margin-top:20px;
 }
 
-.h-entry aside.gallery .slides {
+body.profile aside.gallery .slides {
     margin:0;
 }
 
-.h-entry aside.gallery .slide {
+body.profile aside.gallery .slide {
     margin-bottom:20px;
 }
 
-.h-entry aside.gallery img {
+body.profile aside.gallery img {
     width:100%;
     margin:0;
 }
 
-.h-entry .header .date:before {
+body.profile .header .date:before {
     content:"Date: ";
     font-style:italic;
 }
 
-.h-entry .header .categories:before {
+body.profile .header .categories:before {
     content:"Category: ";
     font-style:italic;
 }
 
-.h-entry .header .tags:before {
+body.profile .header .tags:before {
     content:"Tags: ";
     font-style:italic;
 }
 
-.h-entry .body {
+body.profile .body {
     width:38%;
     float:right;
     margin:20px 0 0 2%;
 }
 
-.h-entry .card {
+body.profile .card {
     margin-top:20px;
 }
 
-.h-entry .card * {
+body.profile .card * {
     margin:0;
 }
 
-.h-entry .card .item {
+body.profile .card .item {
     display:inline-block;
     margin-right:10px;
 }
 
 
-.h-entry .card .attach {
+body.profile .card .attach {
     display:block;
     width:100%;
     display:none;
 }
 
-.h-entry footer .byline {
-    display:none;
-}
+body.profile footer .byline {
+    }
 
-.h-entry footer {
+body.profile footer {
+    margin-top:100px;
     
 }
 
 @media screen and (max-width: 768px) {
-    .h-entry .body {
+    body.profile .body {
         float: none;
         width: 100%;
     }
 
-    .h-entry aside.gallery {
+    body.profile aside.gallery {
         float: none;
         width:100%;
         max-height:600px;
@@ -1140,14 +1153,14 @@ body.event.list .event .content .footer a {
         display:inline-block;
     }
 
-    .h-entry aside.gallery * {
+    body.profile aside.gallery * {
         display:inline-block;
         white-space: nowrap;
     }
 }
 
 @media screen and (max-width: 512px) {
-    .h-entry .body {
+    body.profile .body {
         width:90%;
     }
 }
