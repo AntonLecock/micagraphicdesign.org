@@ -871,6 +871,7 @@ body footer {
     text-align:center;
     padding:60px 0;
     background: rgba(253, 120, 96, .5);
+    clear:both;
 
 }
 
@@ -1130,12 +1131,11 @@ body.profile .card .attach {
     display:none;
 }
 
-body.profile footer .byline {
-    }
 
-body.profile footer {
+
+body.profile article > footer {
     margin-top:100px;
-    
+    width: 100%;
 }
 
 @media screen and (max-width: 768px) {
